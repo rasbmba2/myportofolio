@@ -1,16 +1,14 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
   *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-
   }
   nav{
     display: flex;
     width: 100%;
-    background:#0a5071 ;
+    background:#0a50717b ;
     position: relative;
     justify-content: space-between;
     text-align: center;
@@ -22,17 +20,14 @@
     color: #fff;
     cursor: pointer;
   }
-
   nav ol {
     display: flex;
     list-style: none;
     margin: auto 0;
-   
   }
   nav ol li{
     margin:0 2px;
   }
-
   nav ol li a{
     color: #fff;
     font-size: 20px;
@@ -40,23 +35,17 @@
     text-transform: capitalize;
     letter-spacing: 1px;
     padding: 5px 10px;
-
   }
   nav ol li:hover a {
-    background: #ffffff97;
+    background: #fff;
     color: #0a5071;
-    
-
   }
-
   nav .search-box {
     display: flex;
     margin: auto 0;
     height: 35px;
     line-height: 35px;
-
   }
-
   nav .search-box input {
     border: none ;
     outline: none;
@@ -65,26 +54,20 @@
     padding: 0 10px;
     font-size: 20px;
     width: 350px;
-
   }
   nav .search-box  span{
     color: #0a5071;
     font-size: 20px;
-    background: #fff;
+    background: #ffffff;
     height: 100%;
     padding: 8px;
     position: relative;
     cursor: pointer;
     z-index: 1;
   }
-
-
   nav .search-box  span:hover{
-    color: #fff;
-
-
+    color: #ffffff;
   }
-
   nav .search-box  span::after{
     height: 100%;
     width: 0;
@@ -94,24 +77,20 @@
     top: 0;
     right: 0;
     z-index: -1;
-    transition: 0.3s;
+    transition: 0.3s;  
   }
-
   nav .search-box  span:hover:after{
     width: 100%;
   }
-
   nav .bar{
     position: relative;
     margin: auto;
-    display:none;
-    
+    display:none; 
   }
   nav .bar span{
     position: absolute;
     color: #fff;
     font-size: 35px;
-
   }
   input[type="checkbox"]{
     -webkit-appearance: none;
@@ -122,18 +101,17 @@
     nav {
         display: block;
         padding: 0;
-
     }
     nav .icon{
         display: inline-block;
         padding: 15px 30px;
     }
-    
     nav .search-box{
         width: 100%;
         display: inline-flex;
         justify-content: center;
         margin-bottom: 15px;
+       
     }
     nav .search-box input{
         width: 90%;
@@ -143,18 +121,55 @@
         display: flex;
         flex-direction: column;
         background: #fff;
-        
+        height: 0;
+        visibility: hidden;
+        transition: 0.3s;     
     }
-    nav ol list{
+    nav ol li{
         text-align: center;
-
     }
     nav ol li a{
-        color: #000000;
+        color: #000;
         font-size: 28px;
         padding: 25px;
-        display :block;
-        
+        display :block;     
+    }   
+    nav ol li:nth-child(1){
+      transform: rotateX('-150px');
+    }
+    nav ol li:nth-child(2){
+      transform: rotateX('-200px');
+    }
+    nav ol li:nth-child(3){
+      transform: rotateX('-250px');
+    }
+    nav ol li:nth-child(4){
+      transform: rotateX('-300px');
+    }
+    nav ol li:nth-child(5){
+      transform: rotateX('-350px');
+    }
+    nav .bar{
+      display: block;
+      position:absolute;
+      top: 20px;
+      right: 80px ;
+      cursor: pointer;
+    }
+    nav .bar #times{
+      display: none;
+    }
+    
+    #check:checked ~ nav .bar #times{
+      display: block;
+    }
+
+    #check:checked ~ nav .bar #bars{
+      display: none;
+    }
+    #check:checked ~ nav ol{
+      visibility: visible;
+      height: 465px;
     }
   }
   section{
